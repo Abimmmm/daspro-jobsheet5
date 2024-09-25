@@ -6,7 +6,7 @@ public class Siakad01 {
         String nama, nim;
         char kelas;
         byte absen;
-        double nilaiKuis, nilaiTugas, nilaiUTS, nilaiUAS, nilaiAkhir, nilaiUjian;
+        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
 
         System.out.print("Masukan Nama: ");
         nama = sc.nextLine();
@@ -20,39 +20,38 @@ public class Siakad01 {
         nilaiKuis = sc.nextDouble();
         System.out.print("Masukan nilai tugas: ");
         nilaiTugas = sc.nextDouble();
-        System.out.print("Masukan nilai UTS: ");
-        nilaiUTS = sc.nextDouble();
-        System.out.print("Masukan nilai UAS: ");
-        nilaiUAS = sc.nextDouble();
+        System.out.print("Masukan nilai Ujian: ");
+        nilaiUjian = sc.nextDouble();
 
-        nilaiAkhir = (nilaiKuis * 0.20) + (nilaiTugas * 0.15) + (nilaiUTS * 0.30) + (nilaiUAS * 0.35);
-        nilaiUjian = (nilaiUTS + nilaiUAS) / 2;
+        nilaiAkhir = (nilaiKuis * 0.20) + (nilaiTugas * 0.15) + (nilaiUjian * 0.65);
 
+        System.out.println("Nilai Tugas: " + nilaiUjian);
+        System.out.println("Nilai Kuis: " + nilaiUjian);
+        System.out.println("Nilai Ujian: " + nilaiUjian);
         System.out.println(
                 "Mahasiswa dengan nama " + nama + " (NIM " + nim + ")" + " Kelas " + kelas + " nomor absen " + absen);
         System.out.println("Nilai Akhir: " + nilaiAkhir);
-        System.out.println("Nilai ujian: " + nilaiUjian);
 
         if (nilaiAkhir > 80) {
-            System.out.println("Nili akhir Anda : A");
+            System.out.println("Nilai akhir Anda : A");
             System.out.println("Kualisifikasi : Sangat Baik");
         } else if (nilaiAkhir > 73) {
-            System.out.println("Nili akhir Anda : B+");
+            System.out.println("Nilai akhir Anda : B+");
             System.out.println("Kualisifikasi : Lebih dari Baik");
         } else if (nilaiAkhir > 65) {
-            System.out.println("Nili akhir Anda : B");
+            System.out.println("Nilai akhir Anda : B");
             System.out.println("Kualisifikasi : Baik");
         } else if (nilaiAkhir > 60) {
-            System.out.println("Nili akhir Anda : C+");
+            System.out.println("Nilai akhir Anda : C+");
             System.out.println("Kualisifikasi : Lebih dari Cukup");
         } else if (nilaiAkhir > 50) {
-            System.out.println("Nili akhir Anda : C");
+            System.out.println("Nilai akhir Anda : C");
             System.out.println("Kualisifikasi : Cukup");
         } else if (nilaiAkhir > 39) {
-            System.out.println("Nili akhir Anda : D");
+            System.out.println("Nilai akhir Anda : D");
             System.out.println("Kualisifikasi : Kurang");
         } else {
-            System.out.println("Nili akhir Anda : E");
+            System.out.println("Nilai akhir Anda : E");
             System.out.println("Kualisifikasi : Gagal");
         }
 
