@@ -11,11 +11,11 @@ public class TugasIB01 {
         if (usia < 0) {
             System.out.println("Usia tidak boleh negatif");
         } else if (usia < 13) {
-            System.out.println("Remaja");
+            System.out.println("Anak");
         } else if (usia < 20) {
-            System.out.println("Dewasa");
+            System.out.println("Remaja");
         } else if (usia < 65) {
-            System.out.println("Lansia");
+            System.out.println("Dewasa");
         } else {
             System.out.println("Lansia");
         }
